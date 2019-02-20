@@ -65,7 +65,7 @@ $RandomSecurePassword10 = $RandomPassword10 | ConvertTo-SecureString -AsPlainTex
 ##
 ## Iteration 1
 Try {
-Set-ADAccountPassword -Identity $UserID -OldPassword $CurrentPassword -NewPassword $RandomSecurePassword1 -Server "namerica.idexxi.com"
+Set-ADAccountPassword -Identity $UserID -OldPassword $CurrentPassword -NewPassword $RandomSecurePassword1
 Write-Host -Verbose "Reset #1"
 Write-Host -Verbose "If I blow up right now, your current password is probably: $RandomPassword1"
 Write-Host -Verbose "Waiting $IterationInterval seconds for this password to replicate across the domain before we reset it again"
@@ -79,7 +79,7 @@ Catch {
 
 ## Iteration 2
 Try {
-Set-ADAccountPassword -Identity $UserID -OldPassword $RandomSecurePassword1 -NewPassword $RandomSecurePassword2 -Server "namerica.idexxi.com"
+Set-ADAccountPassword -Identity $UserID -OldPassword $RandomSecurePassword1 -NewPassword $RandomSecurePassword2
 Write-Host -Verbose "Reset #2"
 Write-Host -Verbose "If I blow up right now, your current password is probably: $RandomPassword2"
 Write-Host -Verbose "Waiting $IterationInterval seconds for this password to replicate across the domain before we reset it again"
@@ -93,7 +93,7 @@ Catch {
 
 ## Iteration 3
 Try {
-Set-ADAccountPassword -Identity $UserID -OldPassword $RandomSecurePassword2 -NewPassword $RandomSecurePassword3 -Server "namerica.idexxi.com"
+Set-ADAccountPassword -Identity $UserID -OldPassword $RandomSecurePassword2 -NewPassword $RandomSecurePassword3
 Write-Host -Verbose "Reset #3"
 Write-Host -Verbose "If I blow up right now, your current password is probably: $RandomPassword3"
 Write-Host -Verbose "Waiting $IterationInterval seconds for this password to replicate across the domain before we reset it again"
@@ -107,7 +107,7 @@ Catch {
 
 ## Iteration 4
 Try {
-Set-ADAccountPassword -Identity $UserID -OldPassword $RandomSecurePassword3 -NewPassword $RandomSecurePassword4 -Server "namerica.idexxi.com"
+Set-ADAccountPassword -Identity $UserID -OldPassword $RandomSecurePassword3 -NewPassword $RandomSecurePassword4
 Write-Host -Verbose "Reset #4"
 Write-Host -Verbose "If I blow up right now, your current password is probably: $RandomPassword4"
 Write-Host -Verbose "Waiting $IterationInterval seconds for this password to replicate across the domain before we reset it again"
@@ -121,7 +121,7 @@ Catch {
 
 ## Iteration 5
 Try {
-Set-ADAccountPassword -Identity $UserID -OldPassword $RandomSecurePassword4 -NewPassword $RandomSecurePassword5 -Server "namerica.idexxi.com"
+Set-ADAccountPassword -Identity $UserID -OldPassword $RandomSecurePassword4 -NewPassword $RandomSecurePassword5
 Write-Host -Verbose "Reset #5"
 Write-Host -Verbose "If I blow up right now, your current password is probably: $RandomPassword5"
 Write-Host -Verbose "Waiting $IterationInterval seconds for this password to replicate across the domain before we reset it again"
@@ -135,7 +135,7 @@ Catch {
 
 ## Iteration 6
 Try {
-Set-ADAccountPassword -Identity $UserID -OldPassword $RandomSecurePassword5 -NewPassword $RandomSecurePassword6 -Server "namerica.idexxi.com"
+Set-ADAccountPassword -Identity $UserID -OldPassword $RandomSecurePassword5 -NewPassword $RandomSecurePassword6
 Write-Host -Verbose "Reset #6"
 Write-Host -Verbose "If I blow up right now, your current password is probably: $RandomPassword6"
 Write-Host -Verbose "Waiting $IterationInterval seconds for this password to replicate across the domain before we reset it again"
@@ -149,7 +149,7 @@ Catch {
 
 ## Iteration 7
 Try {
-Set-ADAccountPassword -Identity $UserID -OldPassword $RandomSecurePassword6 -NewPassword $RandomSecurePassword7 -Server "namerica.idexxi.com"
+Set-ADAccountPassword -Identity $UserID -OldPassword $RandomSecurePassword6 -NewPassword $RandomSecurePassword7
 Write-Host -Verbose "Reset #7"
 Write-Host -Verbose "If I blow up right now, your current password is probably: $RandomPassword7"
 Write-Host -Verbose "Waiting $IterationInterval seconds for this password to replicate across the domain before we reset it again"
@@ -163,7 +163,7 @@ Catch {
 
 ## Iteration 8
 Try {
-Set-ADAccountPassword -Identity $UserID -OldPassword $RandomSecurePassword7 -NewPassword $RandomSecurePassword8 -Server "namerica.idexxi.com"
+Set-ADAccountPassword -Identity $UserID -OldPassword $RandomSecurePassword7 -NewPassword $RandomSecurePassword8
 Write-Host -Verbose "Reset #8"
 Write-Host -Verbose "If I blow up right now, your current password is probably: $RandomPassword8"
 Write-Host -Verbose "Waiting $IterationInterval seconds for this password to replicate across the domain before we reset it again"
@@ -177,7 +177,7 @@ Catch {
 
 ## Iteration 9
 Try {
-Set-ADAccountPassword -Identity $UserID -OldPassword $RandomSecurePassword8 -NewPassword $RandomSecurePassword9 -Server "namerica.idexxi.com"
+Set-ADAccountPassword -Identity $UserID -OldPassword $RandomSecurePassword8 -NewPassword $RandomSecurePassword9
 Write-Host -Verbose "Reset #9"
 Write-Host -Verbose "If I blow up right now, your current password is probably: $RandomPassword9"
 Write-Host -Verbose "Waiting $IterationInterval seconds for this password to replicate across the domain before we reset it again"
@@ -191,7 +191,7 @@ Catch {
 
 ## Iteration 10
 Try {
-Set-ADAccountPassword -Identity $UserID -OldPassword $RandomSecurePassword9 -NewPassword $RandomSecurePassword10 -Server "namerica.idexxi.com"
+Set-ADAccountPassword -Identity $UserID -OldPassword $RandomSecurePassword9 -NewPassword $RandomSecurePassword10
 Write-Host -Verbose "Reset #10"
 Write-Host -Verbose "If I blow up right now, your current password is probably: $RandomPassword10"
 Write-Host -Verbose "Waiting $IterationInterval seconds for this password to replicate across the domain before we reset it again"
@@ -205,7 +205,7 @@ Catch {
 
 ## End-Goal Password
 Try {
-Set-ADAccountPassword -Identity $UserID -OldPassword $RandomSecurePassword10 -NewPassword $NewPassword -Server "namerica.idexxi.com"
+Set-ADAccountPassword -Identity $UserID -OldPassword $RandomSecurePassword10 -NewPassword $NewPassword
 Write-Host -Verbose "Reset to the intended password"
 Write-Host -Verbose "If you see this you have successfully set your password to what was specified in the NewPassword variable.  Congrats!  Now go back and take your password out of this file at the beginning and save it again, so that you don't have your password stored here in plain text, ya bum!"
 }
