@@ -3,14 +3,14 @@
 ## You should also close Outlook and other AD/SSO apps so that they don't keep pestering you for credentials as your password cycles.
 ##
 ## To identify your true User ID (not just an alias) you can uncomment and use the below to test.
-## Get-ADUser -Identity $UserID -Server "namerica.idexxi.com"
+## Get-ADUser -Identity $UserID -Server "domain.forest.com"
 ##
 ## Enter your Active Directory user ID below.
-$UserID = 'jwest'
+$UserID = 'userId'
 ##
 ## Set your current password and your intended (new) password below replacing 'xxx'.   Yes it's plain text.  Yes this isn't a best practices - then again, you are the one re-using your password over and over.  Hypocrite!
-$CurrentPassword = 'Getn2W0RK!$' | ConvertTo-SecureString -AsPlainText -Force
-$NewPassword = 'Getn2IDEXX!$' | ConvertTo-SecureString -AsPlainText -Force
+$CurrentPassword = 'password' | ConvertTo-SecureString -AsPlainText -Force
+$NewPassword = 'password' | ConvertTo-SecureString -AsPlainText -Force
 ##
 ## Set your iteration interval between passwords here.  Some companies may only allow you to reset your password once every 60 minutes or such.  The measurement here is seconds, so 1 hour = 3600.  If this is your first time using, try resetting your password twice through CTRL+ALT+DEL to see if there is enforcement of time between resets.
 $IterationInterval = 60
